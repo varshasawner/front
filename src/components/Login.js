@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import loginpic from './../images/loginpic.png'
 // import { useNavigate } from 'react-router-dom'
 const Login = () => {
 
@@ -34,12 +35,22 @@ const Login = () => {
 
     return (
         <div className='login'>
-            <h1>Login</h1>
-            <input type="text" className="inputBox" placeholder='Enter Email'
+           <section className='imageBox'>
+            <img src={loginpic}/>
+           </section>
+           <section className='LoginForm'>
+           <h1>Login</h1>
+           <p>Hello! Please enter your details for login.</p>
+            <input type="text" className="form-control" placeholder='Enter Email'
                 onChange={(e) => setEmail(e.target.value)} value={email} />
-            <input type="password" className="inputBox" placeholder='Enter Password'
+            <input type="password" className="form-control" placeholder='Enter Password'
                 onChange={(e) => setPassword(e.target.value)} value={password} />
-            <button onClick={handleLogin} className="appButton" type="button">Login</button>
+                <p>Forgot Password</p>
+            <button onClick={handleLogin} className="btn btn-primary" type="button">Login</button>
+           
+           <p>i Dont have an account for review & rating</p>
+           Register Now
+           </section>
         </div>
     )
 }

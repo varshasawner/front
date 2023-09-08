@@ -1,4 +1,5 @@
 import React from 'react';
+import loginpic from './../images/loginpic.png'
 // import { Link } from 'react-router-dom';
 import { useState, useNavigate } from 'react';
 
@@ -45,6 +46,9 @@ const Registration = () => {
     return (
         <>
             <section className="signup">
+            <section className='imageBox'>
+            <img src={loginpic}/>
+           </section>
                 <div className="container mt-5 signupbox">
                     <div className="signup-form">
                         <h2 className='form-title text-center mb-4'>Sign Up</h2>
